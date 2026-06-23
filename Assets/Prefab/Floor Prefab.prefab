@@ -151,6 +151,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2637084716204857374}
+  - component: {fileID: 7846372544933411834}
   m_Layer: 0
   m_Name: Floor Prefab
   m_TagString: Untagged
@@ -176,6 +177,23 @@ Transform:
   - {fileID: 8354256943513540881}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7846372544933411834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7606829808575390088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b252195e3b82ae44aa62654b49c5d7bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FencePrefab: {fileID: 9033212215641074445, guid: fb17aabfb6c24734aa8ff4bdc2887b6c, type: 3}
+  SpawnXPos:
+  - -2.5
+  - 0
+  - 2.5
 --- !u!1001 &1424688016664019662
 PrefabInstance:
   m_ObjectHideFlags: 0
