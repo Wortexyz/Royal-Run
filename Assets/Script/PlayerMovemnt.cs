@@ -23,7 +23,7 @@ public class PlayerMovemnt : MonoBehaviour
         Vector3 currentPos = rb.position;
         Vector3 Movedirection = new Vector3(xPos, 0, yPos);
         Vector3 NewPosition = currentPos + Movedirection * (movespead * Time.deltaTime);
-        rb.MovePosition(new Vector3 ( Mathf.Clamp(NewPosition.x,-3,3),NewPosition.y,Mathf.Clamp(NewPosition.z,-1,1)));
+        rb.MovePosition(new Vector3 ( Mathf.Clamp(NewPosition.x,-3,3),NewPosition.y,Mathf.Clamp(NewPosition.z,-1,3)));
     }
 
 
