@@ -7,7 +7,7 @@ public class LevelGenerator : MonoBehaviour
     [SerializeField] int startingChunksAmount = 12;
     [SerializeField] Transform chunkParent;
     [SerializeField] float chunkLength = 10f;
-    [SerializeField] float moveSpeed = 8f;
+    [SerializeField] float moveSpeed = 8f , minMoveSpeed = 2f ,maxMoveSpeed =10f;
 
     List<GameObject> chunks = new List<GameObject>();
 
@@ -19,6 +19,24 @@ public class LevelGenerator : MonoBehaviour
     void Update()
     {
         MoveChunks();
+    }
+
+    public void changingMoveSpeed( float movespeedArg)
+    {
+        float changingNewSpeed = moveSpeed + movespeedArg;
+        if (changingNewSpeed < minMoveSpeed)
+        { 
+            moveSpeed = minMoveSpeed;
+        }
+        else if (changingNewSpeed > maxMoveSpeed)
+        {
+            moveSpeed = maxMoveSpeed;
+        }
+
+        else {
+            moveSpeed += movespeedArg; 
+        }
+        
     }
 
     void SpawnStartingChunks()
