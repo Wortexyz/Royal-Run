@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Checkpoint : MonoBehaviour
 {
-    [SerializeField] GameManagers gameManagers;
+     GameManagers gameManagers;
     [SerializeField] float timeToAdd = 5f;
     void Start()
     {
