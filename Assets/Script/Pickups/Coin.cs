@@ -6,9 +6,10 @@ public class Coin : Pickups
     CoinManager CoinM;
     [SerializeField] int CoinAmount = 1;
 
-    private void Start()
+
+    public void Init(CoinManager CoinM)
     {
-        CoinM = FindFirstObjectByType<CoinManager>();
+        this.CoinM = CoinM;
     }
     protected override void DoPickups()
     {

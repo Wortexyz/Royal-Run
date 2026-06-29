@@ -3,7 +3,7 @@ using UnityEngine;
 public class PlayerPickups : MonoBehaviour
 {
     [SerializeField] Animator animator;
-     float cooldownTimer;
+     float cooldownTimer = 3f;
     [SerializeField] float changingSpeed = -2f;
 
     LevelGenerator levelGenerator;

@@ -2,19 +2,19 @@ using UnityEngine;
 
 public class Apple : Pickups
 {
-    LevelGenerator LevelGenerator;
+    LevelGenerator levelGenerator;
     [SerializeField] float AddingSpeed = 3f;
     
-    private void Start()
+    public void Init( LevelGenerator levelGenerator)
     {
-        LevelGenerator = FindFirstObjectByType<LevelGenerator>();
+        this.levelGenerator = levelGenerator;
     }
     protected override void DoPickups()
     {
         Debug.Log("PowerUps here");
         
         
-        LevelGenerator.changingMoveSpeed(AddingSpeed);
+        levelGenerator.changingMoveSpeed(AddingSpeed);
             
         
     }

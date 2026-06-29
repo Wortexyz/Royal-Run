@@ -140,6 +140,8 @@ Transform:
   - {fileID: 1395957965067929749}
   - {fileID: 6390125238866009028}
   - {fileID: 1463453612590933285}
+  - {fileID: 8263228598238072701}
+  - {fileID: 8354256943513540881}
   m_Father: {fileID: 2637084716204857374}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7606829808575390088
@@ -173,8 +175,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4867708491190575890}
-  - {fileID: 8263228598238072701}
-  - {fileID: 8354256943513540881}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7846372544933411834
@@ -194,6 +194,7 @@ MonoBehaviour:
   CoinPrefab: {fileID: 2378059803027412416, guid: 14954ddad6cca1d46b241d5b65615e77, type: 3}
   AppleChanceToSpawn: 0.3
   coinChanceToSpawn: 0.5
+  coinSeperationLength: 1.5
   Lanes:
   - -2.5
   - 0
@@ -270,7 +271,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 2637084716204857374}
+    m_TransformParent: {fileID: 4867708491190575890}
     m_Modifications:
     - target: {fileID: 3999058980050925843, guid: fd377e6b49a4d1040ba1cf2817673455, type: 3}
       propertyPath: m_LocalScale.x
@@ -340,7 +341,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 2637084716204857374}
+    m_TransformParent: {fileID: 4867708491190575890}
     m_Modifications:
     - target: {fileID: 3999058980050925843, guid: fd377e6b49a4d1040ba1cf2817673455, type: 3}
       propertyPath: m_LocalScale.x

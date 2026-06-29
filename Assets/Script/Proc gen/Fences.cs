@@ -12,12 +12,19 @@ public class Fences : MonoBehaviour
 
     [SerializeField] float[] Lanes = { -2.5f, 0f, 2.5f };
     List<int> availableLanes = new List<int>() { 0,1,2};
+    LevelGenerator levelGenerator;
+    CoinManager coinManager;
 
     private void Start()
     {
         SpawnFence();
         SpawnApple();
         SpawnCoin();
+    }
+    public void Init(LevelGenerator levelGenerator , CoinManager coinManager)
+    {
+        this.levelGenerator = levelGenerator;
+        this.coinManager = coinManager;
     }
 
     void SpawnFence()
@@ -50,7 +57,8 @@ public class Fences : MonoBehaviour
         int selectedLine = SelectLine();
         Vector3 SpawnPos = new Vector3(Lanes[selectedLine], transform.position.y, transform.position.z);
 
-        Instantiate(ApplePrefab, SpawnPos, Quaternion.identity, this.transform);
+        Apple NewApple = Instantiate(ApplePrefab, SpawnPos, Quaternion.identity, this.transform).GetComponent<Apple>();
+        NewApple.Init(levelGenerator);
     }
 
     void SpawnCoin()
@@ -66,7 +74,8 @@ public class Fences : MonoBehaviour
             float SpawncoinZ = coinStartpos - (i * coinSeperationLength);   
         Vector3 SpawnPos = new Vector3(Lanes[selectedLine], transform.position.y, SpawncoinZ);
 
-        Instantiate(CoinPrefab, SpawnPos, Quaternion.identity, this.transform);
+       Coin NewCoin = Instantiate(CoinPrefab, SpawnPos, Quaternion.identity, this.transform).GetComponent<Coin>();
+        NewCoin.Init(coinManager);
             
             
         }
