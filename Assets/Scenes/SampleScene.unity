@@ -6052,8 +6052,8 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 15
-      minScalar: 8
+      scalar: 60
+      minScalar: 30
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -6369,7 +6369,7 @@ ParticleSystem:
         m_RotationOrder: 4
     randomizeRotationDirection: 0
     gravitySource: 0
-    maxNumParticles: 5000
+    maxNumParticles: 2000
     customEmitterVelocity: {x: 0, y: 0, z: 0}
     size3D: 0
     rotation3D: 0
@@ -6635,7 +6635,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1000
+      scalar: 100
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -10872,7 +10872,7 @@ MonoBehaviour:
   moveSpeed: 8
   minMoveSpeed: 2
   maxMoveSpeed: 20
-  MinimumGravity: -9.8
+  MinimumGravity: -8
   MaximumGravity: -30
   CheckpointSpawningintervel: 8
 --- !u!4 &641134579
@@ -11281,7 +11281,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 563064f7540a8e54784acae7a8362c8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingTime: 50
+  startingTime: 30
   timerText: {fileID: 187296360}
   gameoverText: {fileID: 462091803}
   playerMovemnt: {fileID: 94491906}
@@ -11618,8 +11618,9 @@ MonoBehaviour:
   - {fileID: 6426988600324257682, guid: 7a93e6fae5093c846a4325e7d91e5352, type: 3}
   - {fileID: 4117867238584220410, guid: ad6836231f65ecb49b23d207623922fe, type: 3}
   ObstacleParent: {fileID: 2103503108}
-  SpawnTime: 2
+  SpawnTime: 5
   SpawnXPos: 4
+  minObstacleSpawnTime: 0.2
 --- !u!4 &1680924994
 Transform:
   m_ObjectHideFlags: 0

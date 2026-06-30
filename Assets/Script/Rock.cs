@@ -8,7 +8,7 @@ public class Rock : MonoBehaviour
    [SerializeField] ParticleSystem rockParticle;
    [SerializeField] AudioSource rockAudio;
    [SerializeField] float ShakeCooldown = 1f;
-   float CollisionTimer;
+   float CollisionTimer =1f;
 
     void Awake()
     {
